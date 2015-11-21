@@ -54,9 +54,9 @@ public class Node implements Comparable<Node>{
 
 	@Override
 	public int compareTo(Node other) {
-		if (this.weight < other.weight){
+		if (this.weight + this.pathPassed < other.weight + other.pathPassed){
 			return 1;
-		} else if (this.weight > other.weight){
+		} else if (this.weight + this.pathPassed > other.weight + other.pathPassed){
 			return -1;
 		} else {
 			return 0;

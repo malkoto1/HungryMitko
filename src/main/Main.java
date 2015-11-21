@@ -86,7 +86,7 @@ public class Main {
 						newWeight += 2;
 					}
 					
-					Node newNode = new Node(newX, newY, calculateweight(newX, newY, newWeight + node.getPathPassed()), node, newWeight);
+					Node newNode = new Node(newX, newY, calculateweight(newX, newY, newWeight + node.getPathPassed()), node, newWeight + node.getPathPassed());
 					if (!visited.contains(newNode) && (field != 'N')){
 						queue.add(newNode);
 					}
